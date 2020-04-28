@@ -10,15 +10,16 @@ package projetoestruturadados;
  * @author Lucas
  */
 public class No {
-    private int elemento;
+    
+    private String elemento;
     private No prox;
 
-    public No(int elemento, No prox) {
+    public No(String elemento, No prox) {
         this.elemento = elemento;
         this.prox = prox;
     }
 
-    public int getElemento() {
+    public String getElemento() {
         return elemento;
     }
 
@@ -26,7 +27,7 @@ public class No {
         return prox;
     }
 
-    public void setElemento(int elemento) {
+    public void setElemento(String elemento) {
         this.elemento = elemento;
     }
 

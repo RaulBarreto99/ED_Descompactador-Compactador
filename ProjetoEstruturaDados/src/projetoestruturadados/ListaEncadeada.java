@@ -5,6 +5,8 @@
  */
 package projetoestruturadados;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Lucas
@@ -24,7 +26,7 @@ public class ListaEncadeada {
     }
 
     //Inserir no início da lista
-    public void insereInicio(int elemento) {
+    public void insereInicio(String elemento) {
         No novo = new No(elemento, ini);
         ini = novo;
     }
@@ -45,7 +47,7 @@ public class ListaEncadeada {
         return ini;
     }
 
-    public void insereFinal(int elemento) {
+    public void insereFinal(String elemento) {
         No novo = new No(elemento, null);
         No temp = ini;
 
@@ -59,11 +61,11 @@ public class ListaEncadeada {
         }
     }
 
-    public void insereFinalR(int elemento) {
+    public void insereFinalR(String elemento) {
         insereFinalR(ini, elemento);
     }
 
-    public void insereFinalR(No temp, int elemento) {
+    public void insereFinalR(No temp, String elemento) {
         //Lista vazia
         if (temp == null) {
             No novo = new No(elemento, ini);
@@ -78,25 +80,7 @@ public class ListaEncadeada {
         }
     }
 
-    public void insereOrdenado(int elemento) {
-        No novo = new No(elemento, ini);
-        No temp = ini;
-        No anterior = null;
-
-        while (temp != null && temp.getElemento() < novo.getElemento()) {
-            anterior = temp;
-            temp = temp.getProx();
-        }
-        //Lista vazia
-        if (anterior == null) {
-            ini = novo;
-        } else {
-            novo.setProx(temp);
-            anterior.setProx(novo);
-        }
-    }
-
-    public boolean buscaLinearIt(int x) {
+    public boolean buscaLinearIt(String x) {
         No temp = ini;
 
         while (temp != null) {
@@ -108,7 +92,7 @@ public class ListaEncadeada {
         return false;//Não achou
     }
 
-    public No buscaLinearIt2(int x) {
+    public No buscaLinearIt2(String x) {
         No temp = ini;
 
         while (temp != null) {
@@ -133,6 +117,5 @@ public class ListaEncadeada {
         ini = temp;
         temp.setProx(anterior);
     }
-
 }
 
