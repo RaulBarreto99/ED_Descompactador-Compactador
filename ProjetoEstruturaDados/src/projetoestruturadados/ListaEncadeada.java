@@ -39,7 +39,7 @@ public class ListaEncadeada {
         return strLista;
     }
 
-    public int buscaLinearIt(String x) {
+    public int buscaPosicao(String x) {
         No temp = ini;
         int cont = 0;
 
@@ -52,6 +52,20 @@ public class ListaEncadeada {
             temp = temp.getProx();
         }
         return -1;
+    }
+    
+    public String buscaElemento(String x){
+        No temp = ini;
+        int cont = 1;
+        int posicao = Integer.parseInt(x);
+        
+        while(cont < posicao){
+            temp = temp.getProx();
+            cont++;
+        }
+        String a =temp.getElemento();
+        System.out.println("sddcsgdsubhdshuusdbhdscsdcsdcdsc: "+a);
+        return a;
     }
     
      public void remove(String elemento){
