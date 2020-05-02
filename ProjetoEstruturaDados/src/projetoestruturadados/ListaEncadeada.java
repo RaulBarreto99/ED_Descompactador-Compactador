@@ -27,6 +27,20 @@ public class ListaEncadeada {
         ini = novo;
     }
 
+    public void insereFinal(String elemento) {
+        No novo = new No(elemento, null);
+        No temp = ini;
+
+        if (temp == null) { //Lista vazia
+            ini = novo;
+        } else {
+            while (temp.getProx() != null) {
+                temp = temp.getProx();
+            }
+            temp.setProx(novo);
+        }
+    }
+    
     @Override
     public String toString() {
         String strLista = "";
@@ -54,18 +68,16 @@ public class ListaEncadeada {
         return -1;
     }
     
-    public String buscaElemento(String x){
+    public String buscaElemento(int x){
         No temp = ini;
         int cont = 1;
-        int posicao = Integer.parseInt(x);
+        int posicao = x;
         
         while(cont < posicao){
             temp = temp.getProx();
             cont++;
         }
-        String a =temp.getElemento();
-        System.out.println("sddcsgdsubhdshuusdbhdscsdcsdcdsc: "+a);
-        return a;
+        return temp.getElemento();
     }
     
      public void remove(String elemento){
