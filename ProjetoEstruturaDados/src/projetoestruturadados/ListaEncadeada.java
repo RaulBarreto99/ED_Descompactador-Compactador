@@ -7,8 +7,9 @@ package projetoestruturadados;
 
 
 /**
- *
- * @author RaulBarreto
+ * @author Raul Barreto
+ * @author Daniel Leite
+ * @author Lucas Augusto
  */
 public class ListaEncadeada {
 

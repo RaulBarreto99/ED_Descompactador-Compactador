@@ -11,8 +11,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- *
- * @author Lucas
+ * @author Raul Barreto
+ * @author Daniel Leite
+ * @author Lucas Augusto
  */
 public class Projeto {
 
@@ -127,7 +128,6 @@ public class Projeto {
                     System.out.println("Digite o nome do 'arquivo.txt' que deseja descompactar: ");
                     String arquivoD = ent.next();
 
-                    FileReader fileReaderD = new FileReader(arquivoD);
                     String arquivoDeSaidaD = "descompactado.txt";
 
                     FileWriter fileWriterD = new FileWriter(arquivoDeSaidaD);
